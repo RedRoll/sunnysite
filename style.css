@@ -1,0 +1,956 @@
+/* main selectors */
+
+.wrapper-summer {
+    width: 100%;
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 29.17px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #ffffff;
+}
+
+.text {
+    font-size: 18.75px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #eeeeee;
+    line-height: 33.33px;
+    
+}
+
+
+
+
+
+
+
+
+
+/* HEADER BLOCK */
+
+header {
+    padding-top: 55px;
+    max-height: 1000px;
+    width: 100%;
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+}
+
+.summer__header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__nav {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.item__link {
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.nav__item-flex {
+    width: 355px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+/* BURGER MENU */
+/* Бургер будет появлятся при малом разрешении екрана, когда нав будет не
+умещатся на екране, сейчас (в десктоп версии) он отключен */
+.nav__burger {
+    display: none;
+}
+
+.burger__menu {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
+    border: 5px solid violet;
+    
+}
+
+
+
+/* основная линия */
+.burger__menu span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 3px;
+    background-color: black;
+}
+
+
+
+/* линии */
+.burger__menu span::before, 
+.burger__menu span::after {
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+}
+
+.burger__menu span::after, 
+.burger__menu span::before {
+    content: "";
+}
+
+
+/* линии (та, что сверху / снизу от основной) */
+.burger__menu span::before {
+    transform: translateY(-5px);
+}
+
+.burger__menu span::after {
+    transform: translateY(5px);
+}
+
+
+
+/* HEADER MAIN CONTENT */
+
+.header-main {
+    margin-top: 152px;
+margin-bottom: 188px;
+    min-height: 571px;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    justify-items: end;
+}
+
+.header__main-inside {
+    width: 1140px;
+    
+    display: grid;
+    
+    /* float: right; - лучше не использовать, потому что, контент 
+    странно отображался, изначально был помещен вместе со всеми блоками
+    в контейнер, но в диспетчере разработчика отображался вне контейнера */
+    
+    grid-template: 1fr / 525px auto;
+}
+
+
+
+
+
+/* HEADER ELIPSE */
+
+.main__elipse {
+    
+    position: relative;
+    top: -20px;
+    
+    
+}
+
+.elipse__inner {
+    
+    width: 525px;
+    height: 525px;
+    background-color: rgba(255, 24, 98, .5);
+    border-radius: 50%;
+    /* 
+    Изначально думал задать полупрозрачность свойством opacity: .5, но оно
+    наследуется дочерними элементами, так что rgba в помощь; 
+    */
+    position: relative;
+}
+
+.inner__logo {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.logo__title {
+    position: relative;
+    top: 15px;
+    font-size: 57.19px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #ffffff;
+}
+
+.logo__subtitle {
+    font-size: 70.83px;
+    font-family: 'Monoton', cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+}
+
+
+
+
+
+
+/* HEADER TEXT */
+
+.main__text {
+    position: relative;
+    bottom: -15px;
+    display: grid;
+    justify-self: end;
+    max-width: 572px;
+}
+
+.text__inner {
+    
+    text-align: end;
+    align-self: end;
+}
+
+.inner__title {
+    font-size: 62.5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.inner__title::after {
+    content: "";
+    /* inline-block решило проблему при позиционировании, так как выше задано
+    свойство text-align: end; */
+    display: inline-block;
+   
+    height: 7px;
+    width: 161px;
+    background-color: #ffffff;
+    
+    margin: 29px 0 21px;
+}
+
+.inner__text {
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #ffffff;
+}
+
+.inner__btn {
+    margin-top: 51px;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #100667;
+    height: 48px;
+    width: 254px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* SPECIAL-GUESTS BLOCK */
+
+.special-guests {
+    min-height: 490px;
+    width: 100%;
+    background-color: #000001;
+    text-align: center;
+}
+
+.special-guests-container {
+    height: 100%;
+}
+
+/* EYE */
+
+.special-guests__eye {
+    width: 52px;
+    height: 52px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 92px 0 14px;
+}
+
+.eye__black-point {
+    width: 16px;
+    height: 16px;
+    background-color: #000001;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* DESCRIPTION */
+
+.special-guests__title {
+    margin-bottom: 39px;
+}
+
+
+
+/* NEW block */
+
+
+.new {
+    background-color: #aa15b6;
+    width: 100%;
+}
+.containersp {
+    padding: 100px 0 100px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+}
+
+
+/* triangle */
+
+.triangle {
+    display: block;
+    color: #ffffff;
+}
+
+/* item text */
+
+.item__title, .item__text {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+}
+
+.item__title {
+    font-size: 18.7px;
+    line-height: 33.24px;
+    font-weight: 700;
+    margin: 25px 0 35px;
+}
+
+.item__text {
+    white-space: nowrap;
+    font-size: 16.62px;
+    line-height: 24.93px;
+}
+
+
+
+/* PRIORITIES BLOCK */
+
+.priorities {
+    background-color: #000001;
+    text-align: center;
+    color: #ffffff;
+}
+
+.priorities__text-block {
+    padding-top: 89px;
+}
+
+
+/* text */
+
+.priorities__text-block .title {
+    margin-bottom: 50px;
+}
+
+.priorities__text-block .text {
+    white-space: nowrap;
+}
+
+
+/* boxes item */
+
+.boxes__item {
+    padding: 60px 0 60px 70px;
+    text-align: start;
+}
+
+.boxes-item__eye-block {
+    display: inline-block;
+}
+
+/* eye */
+
+.eye-block__eye-main {
+    width: 65px;
+    height: 65px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 17px;
+}
+
+.eye-main__center {
+    width: 44px;
+    height: 44px;
+    background-color: #aa15b6;
+    border-radius: 50%;
+    
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.boxes-item__eye-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+}
+
+
+/* violet boxes */
+
+.priorities__boxes {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    column-gap: 25px;
+    padding: 120px 0 120px;
+}
+
+
+.boxes__item {
+    background-color: #aa15b6;
+}
+
+.boxes-item__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16.7px;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.boxes-item__text {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.7px;
+    white-space: nowrap;
+    margin: 60px 0 50px;
+}
+
+/* eye description */
+
+.eye-block__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14.61px;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+
+.eye-block__text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 14.61px;
+    font-style: normal;
+}
+
+
+
+
+/* BLACK SPACE block */
+
+.black-space {
+    height: 365px;
+    width: 100%;
+    background-image: url(img/images/bg/bg01.png);
+    background-size: cover;
+}
+
+
+
+
+
+
+/* DO-WE-DO block */
+
+.do-we-do {
+    background-color: #000001;
+    text-align: center;
+    color: #ffffff;
+}
+
+.do-we-do__inner {
+    padding: 90px 0 61px;
+}
+
+/* text */
+
+.inner__titlesp {
+    margin-bottom: 30px;
+}
+
+.inner__textsp {
+    white-space: nowrap;
+}
+
+.do-we-do .text::after {
+    content: "";
+    display: inline-block;
+    margin: 50px 0 40px;
+    height: 10px;
+    width: 164px;
+    background-color: #ffffff;
+    
+}
+
+.do-we-do__titles {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.titles__item {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16.67px;
+    font-style: normal;
+    
+}
+
+.titles__item:hover {
+    color: #2d2f2a;
+    cursor: pointer;
+}
+
+
+
+
+/* VIOLET-SMOKE section */
+
+.violet-smoke {
+    height: 356px;
+   
+    background-image: url(img/images/bg/bg02.png);
+    background-size: cover;
+}
+
+
+
+
+/* QUOTES section */
+
+.quotes {
+    background-color: #000001;
+    text-align: center;
+}
+
+.quotes__line {
+    display: inline-block;
+    height: 10px;
+    width: 164px;
+    background-color: #ffffff;
+    margin: 70px 0 75px;
+    position: relative;
+    /* UNICODE кавычек (весь список Unicode можно найти свободно в инете) */
+    quotes: "\201d";
+}
+
+
+/* Пример кавычек в псевдоэлементе */
+.quotes__line::after {
+    content: open-quote;
+    font-size: 83.53px;
+    display: inline-block;
+    padding-top: 75px;
+    color: #ffffff;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    
+   
+    font-style: normal;
+}
+
+/* text */
+
+.quotes__textsp {
+    white-space: nowrap;
+    
+}
+
+.author {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 18.79px;
+    line-height: 33.41px;
+    color: #ffffff;
+    font-style: normal;
+    padding: 44px 0 120px;
+}
+
+
+
+/* BLACK-SPACE-TWO section */
+
+.black-space-two {
+    height: 672px;
+    width: 100%;
+    background-image: url(img/images/bg/bg03.png);
+    background-size: cover;
+}
+
+
+
+
+/* OUR-NUMBER section */
+
+.our-numbers {
+    height: 686px;
+    width: 100%;
+    background-image: url(img/images/bg/bg04.png);
+    background-size: cover;
+    padding: 165px 0 262px;
+}
+
+.our-numbers-inner {
+    height: 235px;
+    width: 644px;  
+    margin: 0 auto;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* text */
+
+.our-numbers__title {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 29.17px;
+    font-style: normal;
+}
+
+/* column block */
+
+.our-numbers__column-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+}
+
+/* columns */
+
+.i__text {
+    white-space: nowrap;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 12.54px;
+    font-style: normal;
+    padding-bottom: 21px;
+    color: #c7c7c7;
+}
+
+.i__suptitle {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20.83px;
+    font-style: normal;
+    padding-bottom: 15px;
+}
+
+.i__subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 20.9px;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+
+
+
+
+/* PROJECTS section */
+
+.projects {
+    background-color: #000001;
+    color: #ffffff;
+}
+
+/* grid container */
+
+.projects-inner {
+    padding: 110px 0 110px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    row-gap: 45px;
+    column-gap: 29px;
+    text-align: center;
+}
+
+/* img */
+
+.img-block__immage {
+    display: block;
+}
+
+/* text-block */
+
+.projects__text-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.text-block__suptitle {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16.67px;
+    font-style: normal;
+    padding-bottom: 10px;
+}
+
+.text-block__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 20.83px;
+    font-style: normal;
+    padding-bottom: 45px;
+}
+
+.text-block__description {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16.67px;
+    font-style: normal;
+    white-space: nowrap;
+    color: #c7c7c7;
+}
+
+
+
+
+/* NO-NAME-BLOCK section */
+
+.no-name-block {
+    background-color: #aa15b6;
+    color: #ffffff;
+}
+
+.no-name-block-wrapper {
+    padding: 75px 0 75px;
+}
+
+.no-name-block-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+/* text */
+
+.no-name-block__item {
+    border-left: 7px solid #ffffff;
+    padding: 15px 0 11px 21px;
+}
+
+.no-name-block__bigger-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16.67px;
+    font-style: normal;
+}
+
+.no-name-block__smaller-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 33px;
+    word-spacing: 75;
+    font-style: normal;
+}
+
+
+
+/* SOCIAL section */
+
+.social {
+    background-color: #000001;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/* quote */
+
+.quotestwo {
+    quotes: "\201c" "\201c";
+    display: inline-block;
+}
+
+.quotestwo::before {
+    content: open-quote;
+    font-size: 83.53px;
+    display: block;
+    padding-top: 75px;
+    color: #ffffff;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    
+   
+    font-style: normal;
+}
+
+
+/* SOCIAL section */
+
+.social__icons-block {
+    margin: 0 auto;
+    padding: 40px 0 45px;
+    display: grid;
+    column-gap: 10px;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
+    width: 350px;
+}
+
+.author-modified {
+    padding-bottom: 0;
+}
+
+.link__immage {
+    display: block;
+}
+
+
+
+/* FOOTER section */
+
+footer {
+    background-color: #aa15b6;
+    color: #ffffff;
+}
+
+.footer-wrapper {
+    padding: 70px 0 80px;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+/* about */
+
+.footer__about {
+    text-align: start;
+    margin-right: 231px;
+}
+
+.about__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 33.33px;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+}
+
+.about__text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 18.75px;
+    line-height: 29.17px;
+    white-space: nowrap;
+    color: #c7c7c7;
+}
+
+/* links */
+
+.footer__links {
+    width: 440px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.links__column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* links block */
+
+.column__links-block {
+    display: flex;
+    flex-direction: column;
+}
+
+/* links text */
+
+.column__title, .links-block__link {
+    font-family: 'Raleway', sans-serif;
+    
+    font-size: 20.83px;
+    line-height: 33.33px;
+}
+
+.column__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 37px;
+}
+
+.links-block__link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.links-block__link:hover {
+    color: #2d2f2a;
+    
+}

@@ -1,0 +1,95 @@
+/* ADAPTIVE */
+
+
+/* НОУТЫ */
+
+@media screen and (max-width:1440px) { /*потому что это ширина самого контенера, который
+    ограничивает сам контент, если тут не применить изменения, то при еще большем
+    сужении окна браузера контент скушается (тоесть он дочтигнет своей максимальной минимальной
+    ширины и уменьшаться дальше будет некуда)*/
+    .header__main-inside {
+        width: auto;
+        margin: 0 auto;
+        
+    }
+
+    .header__nav {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+    .wrapper-summer {
+        width: auto;
+    }
+
+    header {
+        background-image: url(img/bg01.jpg);
+        background-size: cover;
+        
+    }
+
+    .container {
+        width: auto;
+        
+    }
+}
+
+
+/* ПЛАНШЕТЫ */
+
+@media screen and (max-width:1024px) {
+    .container {
+        width: auto;
+        
+    }
+}
+
+@media screen and (max-width:900px) {
+    .main__text {
+        display: none;
+    }
+}
+
+/* СМАРТФОНЫ */
+
+@media screen and (max-width:600px) {
+    .nav__item-flex {
+        display: none;
+    }
+
+    .nav__burger {
+        display: block;
+    }
+
+    .nav__item {
+       margin-top: 10px;
+    }
+
+    .elipse__inner {
+        width: 250px;
+        height: 250px;
+    }
+
+    .main__elipse {
+        margin: 0 auto;
+    }
+
+    .logo__title {
+       
+        font-size: 28px;
+        
+    }
+    
+    .logo__subtitle {
+        font-size: 35px;
+       
+    }
+
+    .container {
+        width: auto;
+        
+    }
+}
+
+/* порешать проблему с отьеданием бекграунда при 550 px */
